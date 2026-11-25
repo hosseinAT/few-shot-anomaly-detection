@@ -1,0 +1,2412 @@
+{
+  "data": "procedural synthetic only",
+  "config": {
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "shots": [
+      5,
+      15
+    ],
+    "budgets": [
+      64,
+      256
+    ],
+    "train_pool": 40,
+    "calibration": 32,
+    "test": 80,
+    "epochs": 25,
+    "size": 64,
+    "alpha": 0.05,
+    "pixel_quantile": 0.995
+  },
+  "runs": [
+    {
+      "method": "autoencoder",
+      "seed": 7,
+      "shots": 5,
+      "budget": null,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 26,
+          "fp": 1,
+          "fn": 14,
+          "tn": 39,
+          "precision": 0.9629629629629629,
+          "recall": 0.65,
+          "dice": 0.7761194029850746,
+          "iou": 0.6341463414634146,
+          "accuracy": 0.8125,
+          "auroc": 0.9225,
+          "average_precision": 0.9360551945289601
+        },
+        "pixel": {
+          "tp": 1566,
+          "fp": 1503,
+          "fn": 904,
+          "tn": 323707,
+          "precision": 0.5102639296187683,
+          "recall": 0.6340080971659919,
+          "dice": 0.5654450261780105,
+          "iou": 0.39416058394160586,
+          "accuracy": 0.9926544189453125,
+          "auroc": 0.9372404277671966,
+          "average_precision": 0.6489372696127967
+        },
+        "image_auroc_bootstrap_95": [
+          0.8418593750000001,
+          0.9708437500000001
+        ],
+        "normal_false_alarm_rate": 0.025,
+        "normal_false_alarm_wilson_95": [
+          0.004426831502681583,
+          0.12881368963473658
+        ],
+        "defect_recall": 0.65,
+        "defect_recall_wilson_95": [
+          0.4950588083725812,
+          0.7786547112682342
+        ],
+        "image_threshold": 0.24321137368679047,
+        "image_threshold_finite": true,
+        "pixel_threshold": 0.20965075492858887,
+        "calibration_and_test_seconds": 0.045395851999955994,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "loss": [
+        0.0749751478433609,
+        0.07387720048427582,
+        0.0728592500090599,
+        0.07187499105930328,
+        0.0708978921175003,
+        0.06992393732070923,
+        0.06899333000183105,
+        0.06818751245737076,
+        0.06763064116239548,
+        0.06736080348491669,
+        0.06703954190015793,
+        0.06658030301332474,
+        0.06608462333679199,
+        0.06565514951944351,
+        0.06532668322324753,
+        0.06509754806756973,
+        0.06495998799800873,
+        0.06489714235067368,
+        0.0648789182305336,
+        0.06488396227359772,
+        0.06489042192697525,
+        0.06488876044750214,
+        0.06486537307500839,
+        0.06481023877859116,
+        0.06473137438297272
+      ],
+      "parameters": 4453
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 7,
+      "shots": 5,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2465,
+          "fp": 12254,
+          "fn": 5,
+          "tn": 312956,
+          "precision": 0.16747061621034037,
+          "recall": 0.9979757085020243,
+          "dice": 0.2868113328291349,
+          "iou": 0.167413746264602,
+          "accuracy": 0.9625885009765625,
+          "auroc": 0.9931645724525306,
+          "average_precision": 0.4590986704025084
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 13.921551704406738,
+        "image_threshold_finite": true,
+        "pixel_threshold": 12.695734024047852,
+        "calibration_and_test_seconds": 0.07249493300014365,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        100
+      ],
+      "bank_and_normalization_bytes": 26400,
+      "coverage_radius": 12.149718284606934,
+      "fit_patch_count": 1280,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 7,
+      "shots": 5,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 31,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.225,
+          "dice": 0.3673469387755102,
+          "iou": 0.225,
+          "accuracy": 0.6125,
+          "auroc": 0.8500000000000001,
+          "average_precision": 0.868769180478016
+        },
+        "pixel": {
+          "tp": 777,
+          "fp": 1776,
+          "fn": 1693,
+          "tn": 323434,
+          "precision": 0.30434782608695654,
+          "recall": 0.3145748987854251,
+          "dice": 0.30937686641449336,
+          "iou": 0.18299576071596796,
+          "accuracy": 0.9894134521484375,
+          "auroc": 0.9385931102506546,
+          "average_precision": 0.2551623712434081
+        },
+        "image_auroc_bootstrap_95": [
+          0.7355468749999999,
+          0.940109375
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.225,
+        "defect_recall_wilson_95": [
+          0.12316091323540954,
+          0.3750309674230957
+        ],
+        "image_threshold": 2.3021414279937744,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.5321815013885498,
+        "calibration_and_test_seconds": 0.013534961000004841,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        8
+      ],
+      "bank_and_normalization_bytes": 2112,
+      "coverage_radius": 0.5682584643363953,
+      "fit_patch_count": 1280,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 7,
+      "shots": 5,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2466,
+          "fp": 13386,
+          "fn": 4,
+          "tn": 311824,
+          "precision": 0.15556396669190006,
+          "recall": 0.9983805668016195,
+          "dice": 0.2691845868354983,
+          "iou": 0.1555247225025227,
+          "accuracy": 0.959136962890625,
+          "auroc": 0.9932932722263421,
+          "average_precision": 0.4596654163998987
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 12.61485481262207,
+        "image_threshold_finite": true,
+        "pixel_threshold": 11.537389755249023,
+        "calibration_and_test_seconds": 0.231578220000074,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        100
+      ],
+      "bank_and_normalization_bytes": 103200,
+      "coverage_radius": 10.386670112609863,
+      "fit_patch_count": 1280,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 7,
+      "shots": 5,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 31,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.225,
+          "dice": 0.3673469387755102,
+          "iou": 0.225,
+          "accuracy": 0.6125,
+          "auroc": 0.8549999999999999,
+          "average_precision": 0.8720668697737781
+        },
+        "pixel": {
+          "tp": 776,
+          "fp": 1708,
+          "fn": 1694,
+          "tn": 323502,
+          "precision": 0.31239935587761675,
+          "recall": 0.31417004048582997,
+          "dice": 0.3132821962050868,
+          "iou": 0.18573480134035425,
+          "accuracy": 0.989617919921875,
+          "auroc": 0.9438497846361995,
+          "average_precision": 0.25904942380342216
+        },
+        "image_auroc_bootstrap_95": [
+          0.7454375000000001,
+          0.9394531250000001
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.225,
+        "defect_recall_wilson_95": [
+          0.12316091323540954,
+          0.3750309674230957
+        ],
+        "image_threshold": 2.2953381538391113,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.494434118270874,
+        "calibration_and_test_seconds": 0.035355017000028965,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        8
+      ],
+      "bank_and_normalization_bytes": 8256,
+      "coverage_radius": 0.32562071084976196,
+      "fit_patch_count": 1280,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "autoencoder",
+      "seed": 7,
+      "shots": 15,
+      "budget": null,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002",
+        "procedural-51-00037",
+        "procedural-51-00007",
+        "procedural-51-00024",
+        "procedural-51-00036",
+        "procedural-51-00013",
+        "procedural-51-00038",
+        "procedural-51-00004",
+        "procedural-51-00028",
+        "procedural-51-00012",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 24,
+          "fp": 1,
+          "fn": 16,
+          "tn": 39,
+          "precision": 0.96,
+          "recall": 0.6,
+          "dice": 0.7384615384615385,
+          "iou": 0.5853658536585366,
+          "accuracy": 0.7875,
+          "auroc": 0.9106249999999999,
+          "average_precision": 0.9305441911460005
+        },
+        "pixel": {
+          "tp": 1594,
+          "fp": 1744,
+          "fn": 876,
+          "tn": 323466,
+          "precision": 0.4775314559616537,
+          "recall": 0.6453441295546559,
+          "dice": 0.5488980716253443,
+          "iou": 0.3782629330802088,
+          "accuracy": 0.99200439453125,
+          "auroc": 0.9389646098497302,
+          "average_precision": 0.6425351629236962
+        },
+        "image_auroc_bootstrap_95": [
+          0.8243593750000001,
+          0.96759375
+        ],
+        "normal_false_alarm_rate": 0.025,
+        "normal_false_alarm_wilson_95": [
+          0.004426831502681583,
+          0.12881368963473658
+        ],
+        "defect_recall": 0.6,
+        "defect_recall_wilson_95": [
+          0.44595893660346597,
+          0.7365167431570776
+        ],
+        "image_threshold": 0.24733297526836395,
+        "image_threshold_finite": true,
+        "pixel_threshold": 0.1991199404001236,
+        "calibration_and_test_seconds": 0.022186768999972628,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "loss": [
+        0.07799845288197199,
+        0.07563195079565048,
+        0.07327072471380233,
+        0.07082944711049398,
+        0.06884608517090479,
+        0.06804927041133245,
+        0.06708585272232691,
+        0.06598240633805592,
+        0.06531778971354167,
+        0.06512366781632105,
+        0.0650236244002978,
+        0.0648888329664866,
+        0.06484392136335373,
+        0.06474662870168686,
+        0.06461052795251211,
+        0.06438911557197571,
+        0.06432739347219467,
+        0.06424656013647716,
+        0.06406450917323431,
+        0.06384834299484889,
+        0.06373345802227656,
+        0.0635235364238421,
+        0.06321019281943639,
+        0.06301956623792648,
+        0.06271769901116689
+      ],
+      "parameters": 4453
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 7,
+      "shots": 15,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002",
+        "procedural-51-00037",
+        "procedural-51-00007",
+        "procedural-51-00024",
+        "procedural-51-00036",
+        "procedural-51-00013",
+        "procedural-51-00038",
+        "procedural-51-00004",
+        "procedural-51-00028",
+        "procedural-51-00012",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2463,
+          "fp": 12250,
+          "fn": 7,
+          "tn": 312960,
+          "precision": 0.16740297695915177,
+          "recall": 0.9971659919028341,
+          "dice": 0.28667869405808066,
+          "iou": 0.1673233695652174,
+          "accuracy": 0.9625946044921875,
+          "auroc": 0.9926102380187352,
+          "average_precision": 0.46009791773403175
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 14.00206470489502,
+        "image_threshold_finite": true,
+        "pixel_threshold": 12.934601783752441,
+        "calibration_and_test_seconds": 0.07553520999999819,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        100
+      ],
+      "bank_and_normalization_bytes": 26400,
+      "coverage_radius": 13.319223403930664,
+      "fit_patch_count": 3840,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 7,
+      "shots": 15,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002",
+        "procedural-51-00037",
+        "procedural-51-00007",
+        "procedural-51-00024",
+        "procedural-51-00036",
+        "procedural-51-00013",
+        "procedural-51-00038",
+        "procedural-51-00004",
+        "procedural-51-00028",
+        "procedural-51-00012",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 32,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.2,
+          "dice": 0.3333333333333333,
+          "iou": 0.2,
+          "accuracy": 0.6,
+          "auroc": 0.885,
+          "average_precision": 0.9060462584384456
+        },
+        "pixel": {
+          "tp": 1051,
+          "fp": 1698,
+          "fn": 1419,
+          "tn": 323512,
+          "precision": 0.3823208439432521,
+          "recall": 0.42550607287449393,
+          "dice": 0.40275914926231077,
+          "iou": 0.2521593090211132,
+          "accuracy": 0.9904876708984375,
+          "auroc": 0.9514663835401529,
+          "average_precision": 0.36813255700410047
+        },
+        "image_auroc_bootstrap_95": [
+          0.774953125,
+          0.9575468750000001
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.2,
+        "defect_recall_wilson_95": [
+          0.10499989725437889,
+          0.34757306346399053
+        ],
+        "image_threshold": 2.94338321685791,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.9625037908554077,
+        "calibration_and_test_seconds": 0.014408436999929108,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        8
+      ],
+      "bank_and_normalization_bytes": 2112,
+      "coverage_radius": 1.080670714378357,
+      "fit_patch_count": 3840,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 7,
+      "shots": 15,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002",
+        "procedural-51-00037",
+        "procedural-51-00007",
+        "procedural-51-00024",
+        "procedural-51-00036",
+        "procedural-51-00013",
+        "procedural-51-00038",
+        "procedural-51-00004",
+        "procedural-51-00028",
+        "procedural-51-00012",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2466,
+          "fp": 12875,
+          "fn": 4,
+          "tn": 312335,
+          "precision": 0.160745714099472,
+          "recall": 0.9983805668016195,
+          "dice": 0.2769075290550783,
+          "iou": 0.16070381231671554,
+          "accuracy": 0.9606964111328125,
+          "auroc": 0.9927641728104182,
+          "average_precision": 0.45812986022761776
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 12.918717384338379,
+        "image_threshold_finite": true,
+        "pixel_threshold": 11.827298164367676,
+        "calibration_and_test_seconds": 0.2435124989999622,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        100
+      ],
+      "bank_and_normalization_bytes": 103200,
+      "coverage_radius": 11.497411727905273,
+      "fit_patch_count": 3840,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 7,
+      "shots": 15,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00015",
+        "procedural-51-00026",
+        "procedural-51-00035",
+        "procedural-51-00006",
+        "procedural-51-00002",
+        "procedural-51-00037",
+        "procedural-51-00007",
+        "procedural-51-00024",
+        "procedural-51-00036",
+        "procedural-51-00013",
+        "procedural-51-00038",
+        "procedural-51-00004",
+        "procedural-51-00028",
+        "procedural-51-00012",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 32,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.2,
+          "dice": 0.3333333333333333,
+          "iou": 0.2,
+          "accuracy": 0.6,
+          "auroc": 0.9312499999999999,
+          "average_precision": 0.9271411778469021
+        },
+        "pixel": {
+          "tp": 1009,
+          "fp": 1523,
+          "fn": 1461,
+          "tn": 323687,
+          "precision": 0.39849921011058453,
+          "recall": 0.40850202429149796,
+          "dice": 0.4034386245501799,
+          "iou": 0.25269221136989733,
+          "accuracy": 0.9908935546875,
+          "auroc": 0.9682644991644763,
+          "average_precision": 0.3764424589472457
+        },
+        "image_auroc_bootstrap_95": [
+          0.8668281250000001,
+          0.9806406249999999
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.2,
+        "defect_recall_wilson_95": [
+          0.10499989725437889,
+          0.34757306346399053
+        ],
+        "image_threshold": 2.8763949871063232,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.817374587059021,
+        "calibration_and_test_seconds": 0.021843509999825983,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        8
+      ],
+      "bank_and_normalization_bytes": 8256,
+      "coverage_radius": 0.6116982698440552,
+      "fit_patch_count": 3840,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "autoencoder",
+      "seed": 17,
+      "shots": 5,
+      "budget": null,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 25,
+          "fp": 0,
+          "fn": 15,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.625,
+          "dice": 0.7692307692307693,
+          "iou": 0.625,
+          "accuracy": 0.8125,
+          "auroc": 0.945,
+          "average_precision": 0.9500031728431648
+        },
+        "pixel": {
+          "tp": 1546,
+          "fp": 1210,
+          "fn": 924,
+          "tn": 324000,
+          "precision": 0.5609579100145138,
+          "recall": 0.625910931174089,
+          "dice": 0.5916570991197857,
+          "iou": 0.4201086956521739,
+          "accuracy": 0.993487548828125,
+          "auroc": 0.9362214132083075,
+          "average_precision": 0.6502530946907734
+        },
+        "image_auroc_bootstrap_95": [
+          0.9030625,
+          0.979390625
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.625,
+        "defect_recall_wilson_95": [
+          0.4703243913730152,
+          0.7577702083276642
+        ],
+        "image_threshold": 0.25251519680023193,
+        "image_threshold_finite": true,
+        "pixel_threshold": 0.2129315584897995,
+        "calibration_and_test_seconds": 0.022803906000035568,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "loss": [
+        0.07165296375751495,
+        0.07057897001504898,
+        0.0695902481675148,
+        0.06866775453090668,
+        0.06780366599559784,
+        0.06698807328939438,
+        0.06624208390712738,
+        0.06566568464040756,
+        0.06557495892047882,
+        0.0660092681646347,
+        0.06598822772502899,
+        0.06571900099515915,
+        0.06551467627286911,
+        0.06542801111936569,
+        0.06541077047586441,
+        0.06542322039604187,
+        0.06544288247823715,
+        0.06545888632535934,
+        0.06546671688556671,
+        0.0654655247926712,
+        0.0654563158750534,
+        0.06544023007154465,
+        0.0654190331697464,
+        0.0653945729136467,
+        0.06536867469549179
+      ],
+      "parameters": 4453
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 17,
+      "shots": 5,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2467,
+          "fp": 13618,
+          "fn": 3,
+          "tn": 311592,
+          "precision": 0.15337270749145165,
+          "recall": 0.9987854251012146,
+          "dice": 0.2659121530584748,
+          "iou": 0.15334410740924914,
+          "accuracy": 0.9584320068359375,
+          "auroc": 0.992791906992019,
+          "average_precision": 0.4640433432350823
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 13.546221733093262,
+        "image_threshold_finite": true,
+        "pixel_threshold": 12.327638626098633,
+        "calibration_and_test_seconds": 0.09400867599993035,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        100
+      ],
+      "bank_and_normalization_bytes": 26400,
+      "coverage_radius": 12.125826835632324,
+      "fit_patch_count": 1280,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 17,
+      "shots": 5,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 33,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.175,
+          "dice": 0.2978723404255319,
+          "iou": 0.175,
+          "accuracy": 0.5875,
+          "auroc": 0.919375,
+          "average_precision": 0.9090040266477926
+        },
+        "pixel": {
+          "tp": 732,
+          "fp": 1361,
+          "fn": 1738,
+          "tn": 323849,
+          "precision": 0.3497372193024367,
+          "recall": 0.2963562753036437,
+          "dice": 0.32084155161078237,
+          "iou": 0.19107282693813626,
+          "accuracy": 0.9905426025390625,
+          "auroc": 0.9354836924431389,
+          "average_precision": 0.25005884960966956
+        },
+        "image_auroc_bootstrap_95": [
+          0.8630312499999999,
+          0.9712812500000001
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.175,
+        "defect_recall_wilson_95": [
+          0.08745413746036086,
+          0.31949990331787265
+        ],
+        "image_threshold": 2.906148672103882,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.933598279953003,
+        "calibration_and_test_seconds": 0.014408816000013758,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        8
+      ],
+      "bank_and_normalization_bytes": 2112,
+      "coverage_radius": 0.8208936452865601,
+      "fit_patch_count": 1280,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 17,
+      "shots": 5,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2469,
+          "fp": 13460,
+          "fn": 1,
+          "tn": 311750,
+          "precision": 0.15500031389289975,
+          "recall": 0.9995951417004049,
+          "dice": 0.2683841513125713,
+          "iou": 0.15499058380414313,
+          "accuracy": 0.9589202880859375,
+          "auroc": 0.9930535685008017,
+          "average_precision": 0.46746911888369125
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 12.40805435180664,
+        "image_threshold_finite": true,
+        "pixel_threshold": 11.374977111816406,
+        "calibration_and_test_seconds": 0.25529589799998575,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        100
+      ],
+      "bank_and_normalization_bytes": 103200,
+      "coverage_radius": 10.377562522888184,
+      "fit_patch_count": 1280,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 17,
+      "shots": 5,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 33,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.175,
+          "dice": 0.2978723404255319,
+          "iou": 0.175,
+          "accuracy": 0.5875,
+          "auroc": 0.90875,
+          "average_precision": 0.8997975933560582
+        },
+        "pixel": {
+          "tp": 719,
+          "fp": 1417,
+          "fn": 1751,
+          "tn": 323793,
+          "precision": 0.3366104868913858,
+          "recall": 0.29109311740890687,
+          "dice": 0.31220147633521494,
+          "iou": 0.18497555955749936,
+          "accuracy": 0.99033203125,
+          "auroc": 0.9390492428000743,
+          "average_precision": 0.24495927219940095
+        },
+        "image_auroc_bootstrap_95": [
+          0.84746875,
+          0.96503125
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.175,
+        "defect_recall_wilson_95": [
+          0.08745413746036086,
+          0.31949990331787265
+        ],
+        "image_threshold": 2.8625540733337402,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.8816733360290527,
+        "calibration_and_test_seconds": 0.022341339999911725,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        8
+      ],
+      "bank_and_normalization_bytes": 8256,
+      "coverage_radius": 0.47888419032096863,
+      "fit_patch_count": 1280,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "autoencoder",
+      "seed": 17,
+      "shots": 15,
+      "budget": null,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030",
+        "procedural-51-00000",
+        "procedural-51-00016",
+        "procedural-51-00026",
+        "procedural-51-00004",
+        "procedural-51-00017",
+        "procedural-51-00012",
+        "procedural-51-00038",
+        "procedural-51-00028",
+        "procedural-51-00021",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 27,
+          "fp": 0,
+          "fn": 13,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.675,
+          "dice": 0.8059701492537313,
+          "iou": 0.675,
+          "accuracy": 0.8375,
+          "auroc": 0.9625,
+          "average_precision": 0.971037813074868
+        },
+        "pixel": {
+          "tp": 1702,
+          "fp": 1895,
+          "fn": 768,
+          "tn": 323315,
+          "precision": 0.4731720878509869,
+          "recall": 0.6890688259109312,
+          "dice": 0.5610680731827922,
+          "iou": 0.38991981672394044,
+          "accuracy": 0.9918731689453125,
+          "auroc": 0.9332895972418693,
+          "average_precision": 0.6780458934118442
+        },
+        "image_auroc_bootstrap_95": [
+          0.919375,
+          0.99503125
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.675,
+        "defect_recall_wilson_95": [
+          0.5201774618987811,
+          0.7991549776821703
+        ],
+        "image_threshold": 0.2069777101278305,
+        "image_threshold_finite": true,
+        "pixel_threshold": 0.15998373925685883,
+        "calibration_and_test_seconds": 0.022816938000005393,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "loss": [
+        0.07089902311563492,
+        0.07020460665225983,
+        0.06986514230569203,
+        0.06979846904675166,
+        0.06979349901278814,
+        0.06970751782258351,
+        0.069559445977211,
+        0.06936409026384353,
+        0.06904103507598242,
+        0.06844737629095714,
+        0.06751343011856079,
+        0.0659508357445399,
+        0.06410415917634964,
+        0.06197599321603775,
+        0.06213231633106867,
+        0.0623713289697965,
+        0.061819134404261906,
+        0.061153268069028856,
+        0.06121137390534083,
+        0.06130668247739474,
+        0.061144544184207915,
+        0.06098138640324275,
+        0.060639611134926476,
+        0.06051446124911308,
+        0.06049364432692528
+      ],
+      "parameters": 4453
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 17,
+      "shots": 15,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030",
+        "procedural-51-00000",
+        "procedural-51-00016",
+        "procedural-51-00026",
+        "procedural-51-00004",
+        "procedural-51-00017",
+        "procedural-51-00012",
+        "procedural-51-00038",
+        "procedural-51-00028",
+        "procedural-51-00021",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2465,
+          "fp": 12726,
+          "fn": 5,
+          "tn": 312484,
+          "precision": 0.16226713185438746,
+          "recall": 0.9979757085020243,
+          "dice": 0.2791461412151067,
+          "iou": 0.16221374045801526,
+          "accuracy": 0.9611480712890625,
+          "auroc": 0.9930795093845933,
+          "average_precision": 0.46196177377218495
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 13.987045288085938,
+        "image_threshold_finite": true,
+        "pixel_threshold": 12.859400749206543,
+        "calibration_and_test_seconds": 0.07296466999991935,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        100
+      ],
+      "bank_and_normalization_bytes": 26400,
+      "coverage_radius": 13.271099090576172,
+      "fit_patch_count": 3840,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 17,
+      "shots": 15,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030",
+        "procedural-51-00000",
+        "procedural-51-00016",
+        "procedural-51-00026",
+        "procedural-51-00004",
+        "procedural-51-00017",
+        "procedural-51-00012",
+        "procedural-51-00038",
+        "procedural-51-00028",
+        "procedural-51-00021",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 34,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.15,
+          "dice": 0.2608695652173913,
+          "iou": 0.15,
+          "accuracy": 0.575,
+          "auroc": 0.8518749999999999,
+          "average_precision": 0.871358954806682
+        },
+        "pixel": {
+          "tp": 886,
+          "fp": 1829,
+          "fn": 1584,
+          "tn": 323381,
+          "precision": 0.3263351749539595,
+          "recall": 0.35870445344129553,
+          "dice": 0.34175506268081,
+          "iou": 0.20609444056757387,
+          "accuracy": 0.9895843505859375,
+          "auroc": 0.8764891498946741,
+          "average_precision": 0.24442429374925345
+        },
+        "image_auroc_bootstrap_95": [
+          0.765359375,
+          0.922625
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.15,
+        "defect_recall_wilson_95": [
+          0.07061187717320501,
+          0.29072324366489255
+        ],
+        "image_threshold": 2.4090371131896973,
+        "image_threshold_finite": true,
+        "pixel_threshold": 0.9560929536819458,
+        "calibration_and_test_seconds": 0.017742495999982566,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        8
+      ],
+      "bank_and_normalization_bytes": 2112,
+      "coverage_radius": 0.8226719498634338,
+      "fit_patch_count": 3840,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 17,
+      "shots": 15,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030",
+        "procedural-51-00000",
+        "procedural-51-00016",
+        "procedural-51-00026",
+        "procedural-51-00004",
+        "procedural-51-00017",
+        "procedural-51-00012",
+        "procedural-51-00038",
+        "procedural-51-00028",
+        "procedural-51-00021",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2469,
+          "fp": 12915,
+          "fn": 1,
+          "tn": 312295,
+          "precision": 0.16049141965678626,
+          "recall": 0.9995951417004049,
+          "dice": 0.2765766774952392,
+          "iou": 0.1604809879753006,
+          "accuracy": 0.96058349609375,
+          "auroc": 0.9929952393265167,
+          "average_precision": 0.4620464713828631
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 12.87709903717041,
+        "image_threshold_finite": true,
+        "pixel_threshold": 11.820837020874023,
+        "calibration_and_test_seconds": 0.25542233700002726,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        100
+      ],
+      "bank_and_normalization_bytes": 103200,
+      "coverage_radius": 11.539299964904785,
+      "fit_patch_count": 3840,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 17,
+      "shots": 15,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00039",
+        "procedural-51-00013",
+        "procedural-51-00011",
+        "procedural-51-00035",
+        "procedural-51-00030",
+        "procedural-51-00000",
+        "procedural-51-00016",
+        "procedural-51-00026",
+        "procedural-51-00004",
+        "procedural-51-00017",
+        "procedural-51-00012",
+        "procedural-51-00038",
+        "procedural-51-00028",
+        "procedural-51-00021",
+        "procedural-51-00003"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 34,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.15,
+          "dice": 0.2608695652173913,
+          "iou": 0.15,
+          "accuracy": 0.575,
+          "auroc": 0.8975,
+          "average_precision": 0.8980595612447884
+        },
+        "pixel": {
+          "tp": 893,
+          "fp": 1867,
+          "fn": 1577,
+          "tn": 323343,
+          "precision": 0.32355072463768114,
+          "recall": 0.36153846153846153,
+          "dice": 0.341491395793499,
+          "iou": 0.20590269771731612,
+          "accuracy": 0.98948974609375,
+          "auroc": 0.934749484823696,
+          "average_precision": 0.2737688627731816
+        },
+        "image_auroc_bootstrap_95": [
+          0.8309843749999999,
+          0.9618906249999999
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.15,
+        "defect_recall_wilson_95": [
+          0.07061187717320501,
+          0.29072324366489255
+        ],
+        "image_threshold": 2.3841168880462646,
+        "image_threshold_finite": true,
+        "pixel_threshold": 0.8204099535942078,
+        "calibration_and_test_seconds": 0.02244957500010969,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        8
+      ],
+      "bank_and_normalization_bytes": 8256,
+      "coverage_radius": 0.4171096086502075,
+      "fit_patch_count": 3840,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "autoencoder",
+      "seed": 27,
+      "shots": 5,
+      "budget": null,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 25,
+          "fp": 0,
+          "fn": 15,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.625,
+          "dice": 0.7692307692307693,
+          "iou": 0.625,
+          "accuracy": 0.8125,
+          "auroc": 0.934375,
+          "average_precision": 0.9422920558749925
+        },
+        "pixel": {
+          "tp": 1568,
+          "fp": 1347,
+          "fn": 902,
+          "tn": 323863,
+          "precision": 0.5379073756432247,
+          "recall": 0.6348178137651822,
+          "dice": 0.5823584029712163,
+          "iou": 0.41079381713387475,
+          "accuracy": 0.9931365966796875,
+          "auroc": 0.9381380638882106,
+          "average_precision": 0.6537741209559109
+        },
+        "image_auroc_bootstrap_95": [
+          0.8818437499999999,
+          0.9756406249999999
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.625,
+        "defect_recall_wilson_95": [
+          0.4703243913730152,
+          0.7577702083276642
+        ],
+        "image_threshold": 0.2469291388988495,
+        "image_threshold_finite": true,
+        "pixel_threshold": 0.21019281446933746,
+        "calibration_and_test_seconds": 0.029569986000069548,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "loss": [
+        0.07569988071918488,
+        0.07457311451435089,
+        0.07344214618206024,
+        0.072269007563591,
+        0.07100740820169449,
+        0.06963330507278442,
+        0.0681416243314743,
+        0.06662030518054962,
+        0.06539350748062134,
+        0.0652935728430748,
+        0.06651011109352112,
+        0.06637958437204361,
+        0.06562085449695587,
+        0.06507391482591629,
+        0.06489483267068863,
+        0.06492146849632263,
+        0.06501774489879608,
+        0.06510502099990845,
+        0.065152607858181,
+        0.06515707075595856,
+        0.06512352079153061,
+        0.06506295502185822,
+        0.06498740613460541,
+        0.06490977108478546,
+        0.06484082341194153
+      ],
+      "parameters": 4453
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 27,
+      "shots": 5,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 1,
+          "fn": 0,
+          "tn": 39,
+          "precision": 0.975609756097561,
+          "recall": 1.0,
+          "dice": 0.9876543209876543,
+          "iou": 0.975609756097561,
+          "accuracy": 0.9875,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2469,
+          "fp": 12632,
+          "fn": 1,
+          "tn": 312578,
+          "precision": 0.1634991060194689,
+          "recall": 0.9995951417004049,
+          "dice": 0.281031244664504,
+          "iou": 0.16348827969805324,
+          "accuracy": 0.9614471435546875,
+          "auroc": 0.9932263649760037,
+          "average_precision": 0.46470661770858085
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.025,
+        "normal_false_alarm_wilson_95": [
+          0.004426831502681583,
+          0.12881368963473658
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 14.36701774597168,
+        "image_threshold_finite": true,
+        "pixel_threshold": 13.180704116821289,
+        "calibration_and_test_seconds": 0.08638684099992133,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        100
+      ],
+      "bank_and_normalization_bytes": 26400,
+      "coverage_radius": 12.724492073059082,
+      "fit_patch_count": 1280,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 27,
+      "shots": 5,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 32,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.2,
+          "dice": 0.3333333333333333,
+          "iou": 0.2,
+          "accuracy": 0.6,
+          "auroc": 0.8531249999999999,
+          "average_precision": 0.8552648253044495
+        },
+        "pixel": {
+          "tp": 786,
+          "fp": 2108,
+          "fn": 1684,
+          "tn": 323102,
+          "precision": 0.27159640635798205,
+          "recall": 0.31821862348178137,
+          "dice": 0.2930648769574944,
+          "iou": 0.17169069462647443,
+          "accuracy": 0.988427734375,
+          "auroc": 0.930664754521121,
+          "average_precision": 0.2848411125904987
+        },
+        "image_auroc_bootstrap_95": [
+          0.74875,
+          0.932546875
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.2,
+        "defect_recall_wilson_95": [
+          0.10499989725437889,
+          0.34757306346399053
+        ],
+        "image_threshold": 2.1575939655303955,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.4873073101043701,
+        "calibration_and_test_seconds": 0.016367084999956205,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        8
+      ],
+      "bank_and_normalization_bytes": 2112,
+      "coverage_radius": 0.7682133913040161,
+      "fit_patch_count": 1280,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 27,
+      "shots": 5,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2469,
+          "fp": 13122,
+          "fn": 1,
+          "tn": 312088,
+          "precision": 0.15836059264960553,
+          "recall": 0.9995951417004049,
+          "dice": 0.27340678810697083,
+          "iou": 0.15835043612108773,
+          "accuracy": 0.9599517822265625,
+          "auroc": 0.9932733803769523,
+          "average_precision": 0.4662405428993399
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 13.59261703491211,
+        "image_threshold_finite": true,
+        "pixel_threshold": 12.051597595214844,
+        "calibration_and_test_seconds": 0.2721952379999948,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        100
+      ],
+      "bank_and_normalization_bytes": 103200,
+      "coverage_radius": 10.847447395324707,
+      "fit_patch_count": 1280,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 27,
+      "shots": 5,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 32,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.2,
+          "dice": 0.3333333333333333,
+          "iou": 0.2,
+          "accuracy": 0.6,
+          "auroc": 0.8375,
+          "average_precision": 0.8380227140464467
+        },
+        "pixel": {
+          "tp": 753,
+          "fp": 2064,
+          "fn": 1717,
+          "tn": 323146,
+          "precision": 0.2673056443024494,
+          "recall": 0.3048582995951417,
+          "dice": 0.2848496311707963,
+          "iou": 0.16607851786501984,
+          "accuracy": 0.9884613037109375,
+          "auroc": 0.9392602257501133,
+          "average_precision": 0.28152291088902653
+        },
+        "image_auroc_bootstrap_95": [
+          0.7361406250000001,
+          0.924453125
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.2,
+        "defect_recall_wilson_95": [
+          0.10499989725437889,
+          0.34757306346399053
+        ],
+        "image_threshold": 2.146719455718994,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.4527652263641357,
+        "calibration_and_test_seconds": 0.025219745999947918,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        8
+      ],
+      "bank_and_normalization_bytes": 8256,
+      "coverage_radius": 0.43730318546295166,
+      "fit_patch_count": 1280,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "autoencoder",
+      "seed": 27,
+      "shots": 15,
+      "budget": null,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002",
+        "procedural-51-00011",
+        "procedural-51-00027",
+        "procedural-51-00037",
+        "procedural-51-00033",
+        "procedural-51-00012",
+        "procedural-51-00013",
+        "procedural-51-00025",
+        "procedural-51-00031",
+        "procedural-51-00018",
+        "procedural-51-00032"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 25,
+          "fp": 0,
+          "fn": 15,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.625,
+          "dice": 0.7692307692307693,
+          "iou": 0.625,
+          "accuracy": 0.8125,
+          "auroc": 0.925625,
+          "average_precision": 0.9367175804322457
+        },
+        "pixel": {
+          "tp": 1596,
+          "fp": 1484,
+          "fn": 874,
+          "tn": 323726,
+          "precision": 0.5181818181818182,
+          "recall": 0.6461538461538462,
+          "dice": 0.5751351351351351,
+          "iou": 0.40364188163884673,
+          "accuracy": 0.992803955078125,
+          "auroc": 0.939360061583378,
+          "average_precision": 0.660337427722178
+        },
+        "image_auroc_bootstrap_95": [
+          0.8742499999999999,
+          0.96696875
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.625,
+        "defect_recall_wilson_95": [
+          0.4703243913730152,
+          0.7577702083276642
+        ],
+        "image_threshold": 0.2427266240119934,
+        "image_threshold_finite": true,
+        "pixel_threshold": 0.20722542703151703,
+        "calibration_and_test_seconds": 0.027642874000093798,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "loss": [
+        0.07331147640943528,
+        0.07159058749675751,
+        0.06979364603757858,
+        0.06804346938927969,
+        0.06793490201234817,
+        0.06791237394014994,
+        0.06726683626572291,
+        0.06722164303064346,
+        0.06733878701925278,
+        0.06738317608833314,
+        0.06734285950660705,
+        0.06726558109124502,
+        0.06719746937354405,
+        0.06716427107652029,
+        0.06715962638457616,
+        0.06715122510989507,
+        0.06711719830830892,
+        0.06706572671731313,
+        0.06701401422421137,
+        0.06696804265181223,
+        0.06691369464000066,
+        0.06683415671189626,
+        0.06672129034996033,
+        0.06659319301446279,
+        0.06647578328847885
+      ],
+      "parameters": 4453
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 27,
+      "shots": 15,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002",
+        "procedural-51-00011",
+        "procedural-51-00027",
+        "procedural-51-00037",
+        "procedural-51-00033",
+        "procedural-51-00012",
+        "procedural-51-00013",
+        "procedural-51-00025",
+        "procedural-51-00031",
+        "procedural-51-00018",
+        "procedural-51-00032"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2465,
+          "fp": 12642,
+          "fn": 5,
+          "tn": 312568,
+          "precision": 0.1631693916727345,
+          "recall": 0.9979757085020243,
+          "dice": 0.28048017295329125,
+          "iou": 0.16311540497617788,
+          "accuracy": 0.9614044189453125,
+          "auroc": 0.9930756955922719,
+          "average_precision": 0.46039505135717834
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 14.398036003112793,
+        "image_threshold_finite": true,
+        "pixel_threshold": 13.083047866821289,
+        "calibration_and_test_seconds": 0.09464946200000668,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        100
+      ],
+      "bank_and_normalization_bytes": 26400,
+      "coverage_radius": 13.313800811767578,
+      "fit_patch_count": 3840,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 27,
+      "shots": 15,
+      "budget": 64,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002",
+        "procedural-51-00011",
+        "procedural-51-00027",
+        "procedural-51-00037",
+        "procedural-51-00033",
+        "procedural-51-00012",
+        "procedural-51-00013",
+        "procedural-51-00025",
+        "procedural-51-00031",
+        "procedural-51-00018",
+        "procedural-51-00032"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 31,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.225,
+          "dice": 0.3673469387755102,
+          "iou": 0.225,
+          "accuracy": 0.6125,
+          "auroc": 0.8181250000000001,
+          "average_precision": 0.8627023369149871
+        },
+        "pixel": {
+          "tp": 879,
+          "fp": 2426,
+          "fn": 1591,
+          "tn": 322784,
+          "precision": 0.2659606656580938,
+          "recall": 0.35587044534412954,
+          "dice": 0.3044155844155844,
+          "iou": 0.1795343137254902,
+          "accuracy": 0.9877410888671875,
+          "auroc": 0.8661390161225004,
+          "average_precision": 0.280880982541901
+        },
+        "image_auroc_bootstrap_95": [
+          0.717421875,
+          0.90384375
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.225,
+        "defect_recall_wilson_95": [
+          0.12316091323540954,
+          0.3750309674230957
+        ],
+        "image_threshold": 2.0052425861358643,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.0887378454208374,
+        "calibration_and_test_seconds": 0.015040788000078464,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        64,
+        8
+      ],
+      "bank_and_normalization_bytes": 2112,
+      "coverage_radius": 0.8915796279907227,
+      "fit_patch_count": 3840,
+      "feature_source": "normal-only trained encoder"
+    },
+    {
+      "method": "handcrafted_memory",
+      "seed": 27,
+      "shots": 15,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002",
+        "procedural-51-00011",
+        "procedural-51-00027",
+        "procedural-51-00037",
+        "procedural-51-00033",
+        "procedural-51-00012",
+        "procedural-51-00013",
+        "procedural-51-00025",
+        "procedural-51-00031",
+        "procedural-51-00018",
+        "procedural-51-00032"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 40,
+          "fp": 0,
+          "fn": 0,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 1.0,
+          "dice": 1.0,
+          "iou": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "average_precision": 1.0
+        },
+        "pixel": {
+          "tp": 2464,
+          "fp": 13025,
+          "fn": 6,
+          "tn": 312185,
+          "precision": 0.15908063787203822,
+          "recall": 0.9975708502024292,
+          "dice": 0.2744028063923381,
+          "iou": 0.1590190383994837,
+          "accuracy": 0.9602325439453125,
+          "auroc": 0.992800106614387,
+          "average_precision": 0.46079752300844945
+        },
+        "image_auroc_bootstrap_95": [
+          0.9999999999999999,
+          1.0
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 1.0,
+        "defect_recall_wilson_95": [
+          0.912378398802718,
+          1.0
+        ],
+        "image_threshold": 13.027215957641602,
+        "image_threshold_finite": true,
+        "pixel_threshold": 11.945046424865723,
+        "calibration_and_test_seconds": 0.2440090049999526,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        100
+      ],
+      "bank_and_normalization_bytes": 103200,
+      "coverage_radius": 11.638958930969238,
+      "fit_patch_count": 3840,
+      "feature_source": "fixed intensity/gradient/texture descriptors"
+    },
+    {
+      "method": "encoder_memory",
+      "seed": 27,
+      "shots": 15,
+      "budget": 256,
+      "fit_sample_ids": [
+        "procedural-51-00019",
+        "procedural-51-00028",
+        "procedural-51-00020",
+        "procedural-51-00003",
+        "procedural-51-00002",
+        "procedural-51-00011",
+        "procedural-51-00027",
+        "procedural-51-00037",
+        "procedural-51-00033",
+        "procedural-51-00012",
+        "procedural-51-00013",
+        "procedural-51-00025",
+        "procedural-51-00031",
+        "procedural-51-00018",
+        "procedural-51-00032"
+      ],
+      "metrics": {
+        "image": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 31,
+          "tn": 40,
+          "precision": 1.0,
+          "recall": 0.225,
+          "dice": 0.3673469387755102,
+          "iou": 0.225,
+          "accuracy": 0.6125,
+          "auroc": 0.8806249999999999,
+          "average_precision": 0.9013775922686429
+        },
+        "pixel": {
+          "tp": 868,
+          "fp": 2195,
+          "fn": 1602,
+          "tn": 323015,
+          "precision": 0.28338230492980737,
+          "recall": 0.351417004048583,
+          "dice": 0.3137538405928068,
+          "iou": 0.18606645230439442,
+          "accuracy": 0.9884124755859375,
+          "auroc": 0.9418943424535277,
+          "average_precision": 0.30521127942532683
+        },
+        "image_auroc_bootstrap_95": [
+          0.7785156249999999,
+          0.9402968750000001
+        ],
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_alarm_wilson_95": [
+          0.0,
+          0.08762160119728224
+        ],
+        "defect_recall": 0.225,
+        "defect_recall_wilson_95": [
+          0.12316091323540954,
+          0.3750309674230957
+        ],
+        "image_threshold": 1.9877384901046753,
+        "image_threshold_finite": true,
+        "pixel_threshold": 1.0030763149261475,
+        "calibration_and_test_seconds": 0.03534790599996995,
+        "n_calibration": 32,
+        "normal_test": 40,
+        "defect_test": 40
+      },
+      "bank_shape": [
+        256,
+        8
+      ],
+      "bank_and_normalization_bytes": 8256,
+      "coverage_radius": 0.4551195204257965,
+      "fit_patch_count": 3840,
+      "feature_source": "normal-only trained encoder"
+    }
+  ],
+  "environment": {
+    "recorded_utc": "2026-11-24T19:36:46.894291+00:00",
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "processor": "",
+    "torch": "2.5.1+cpu",
+    "numpy": "2.3.5",
+    "threads": 2,
+    "device": "cpu",
+    "source_sha256": "71a377202b0cc3da0d983c14bbfe400c3806f31bb237c66a5f645072da8c961c",
+    "git_revision": null,
+    "reproducibility": "Deterministic CPU settings; cross-version bitwise identity is not guaranteed."
+  },
+  "budget_definition": "shots counts normal fit images; independent calibration images are additional.",
+  "feature_claim": "No pretrained ImageNet backbone; this is a patch-memory study, not a PatchCore reproduction."
+}

@@ -1,0 +1,22 @@
+{
+  "seeds": [
+    7,
+    17,
+    27
+  ],
+  "shots": [
+    5,
+    15
+  ],
+  "budgets": [
+    64,
+    256
+  ],
+  "train_pool": 40,
+  "calibration": 32,
+  "test": 80,
+  "epochs": 25,
+  "size": 64,
+  "alpha": 0.05,
+  "pixel_quantile": 0.995
+}

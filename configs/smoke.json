@@ -1,0 +1,14 @@
+{
+  "seeds": [
+    7
+  ],
+  "shots": [
+    3
+  ],
+  "budgets": [
+    8
+  ],
+  "epochs": 1,
+  "calibration": 20,
+  "test": 4
+}

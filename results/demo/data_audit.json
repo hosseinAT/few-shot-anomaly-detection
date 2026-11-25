@@ -1,0 +1,13 @@
+{
+  "source": "procedural surfaces",
+  "split_seeds": {
+    "train": 51,
+    "cal": 52,
+    "test": 53
+  },
+  "counts": {
+    "normal_fit_pool": 40,
+    "normal_calibration": 32,
+    "test": 80
+  }
+}
